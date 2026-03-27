@@ -103,5 +103,20 @@
     "insurance": true,
     "options": ["نهار و صبحانه", "هفل پنج ستاره"],
     "image": "/static/images/italyTour.png"
+  },
+  {
+    "id": "7890abcd-ef12-3456-7890-123456abcdef",
+    "origin": { "id": "1", "name": "Tehran" },
+    "destination": { "id": "10", "name": "Kish" },
+    "startDate": "2026-03-15T00:00:00.000Z",
+    "endDate": "2026-03-19T00:00:00.000Z",
+    "title": "تور کیش",
+    "fleetVehicle": "airplane",
+    "price": 85000,
+    "availableSeats": 12,
+    "capacity": 50,
+    "insurance": true,
+    "options": ["گشت جزیره", "هتل پنج ستاره", "ترانسفر فرودگاهی"],
+    "image": "/static/images/kishTour.png"
   }
 ]
