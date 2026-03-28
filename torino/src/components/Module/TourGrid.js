@@ -1,0 +1,96 @@
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import { IoIosArrowDown } from "react-icons/io";
+const getPersianMonth = (dateString) => {
+  return (
+    new Intl.DateTimeFormat("fa-IR", { month: "long" }).format(
+      new Date(dateString),
+    ) + " ماه"
+  );
+};
+const getDurationDays = (start, end) => {
+  return Math.ceil((new Date(end) - new Date(start)) / (1000 * 60 * 60 * 24));
+};
+const getVehicleName = (vehicle) => {
+  const map = {
+    airplane: "پرواز",
+    bus: "اتوبوس",
+    train: "قطار",
+    ship: "کشتی",
+    suv: "آفرود",
+  };
+  return map[vehicle.toLowerCase()] || "خودرو";
+};
+
+export default function TourGrid({ tours }) {
+  const [showAll, setShowAll] = useState(false);
+
+  return (
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {tours.map((tour, index) => {
+          const subtitleText = `${getPersianMonth(tour.startDate)} . ${getDurationDays(tour.startDate, tour.endDate).toLocaleString("fa-IR")} روزه - ${getVehicleName(tour.fleetVehicle)} - ${tour.options[0] || ""}`;
+
+          const isHiddenOnMobile = !showAll && index >= 4;
+
+          return (
+            <div
+              key={tour.id}
+              className={`flex-col bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 ${isHiddenOnMobile ? "max-lg:hidden lg:flex" : "flex"}`}
+            >
+              <div className="relative w-full h-44 bg-gray-100">
+                <Image
+                  src={tour.image}
+                  alt={tour.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+
+              <div className="flex flex-col flex-1 p-4">
+                <div className="mb-4">
+                  <h4 className="font-bold text-xl text-gray-900 mb-2 truncate">
+                    {tour.title}
+                  </h4>
+                  <p
+                    className="text-gray-500 text-sm truncate"
+                    title={subtitleText}
+                  >
+                    {subtitleText}
+                  </p>
+                </div>
+
+                <div className="mt-auto border-t border-gray-100 pt-3 flex justify-between items-center">
+                  <button className="bg-[#28a745] text-white px-6 py-1.5 rounded-md text-sm font-medium hover:bg-green-600 transition-colors shadow-sm">
+                    رزرو
+                  </button>
+                  <div className="flex items-center gap-1.5" dir="ltr">
+                    <span className="text-gray-500 text-xs mt-1">تومان</span>
+                    <span className="text-[#00b3e9] font-bold text-lg">
+                      {tour.price.toLocaleString("fa-IR")}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {!showAll && tours.length > 4 && (
+        <div className="mt-8 flex justify-center lg:hidden ">
+          <button
+            onClick={() => setShowAll(true)}
+            className="flex  justify-center w-full mx-1 py-1 text-gray-500 cursor-pointer"
+          >
+            مشاهده بیشتر
+            <IoIosArrowDown className="text-gray-500 mr-2" />
+          </button>
+        </div>
+      )}
+    </>
+  );
+}
