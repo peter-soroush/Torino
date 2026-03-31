@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 import { BsQuestionOctagonFill, BsQuestionCircleFill } from "react-icons/bs";
+import { toPersianNumbers } from "../utils/functions";
 
 // آرایه تصاویر تستی
 const images = [
@@ -13,10 +14,6 @@ const images = [
 ];
 
 // تابع کمکی برای فارسی کردن اعداد
-const toPersianNumbers = (num) => {
-  const farsiDigits = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
-  return num.toString().replace(/\d/g, (x) => farsiDigits[x]);
-};
 
 function WhyUs() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -151,7 +148,7 @@ function WhyUs() {
         </div>
       </section>
 
-      <section className="container max-w-full mx-auto px-10 md:px-31 mt-16 font-sans border-t-gray-200 border-t-1 pt-5">
+      <section className="container max-w-full mx-auto px-10 md:px-31 mt-16 py-8 font-sans border-t-gray-200 border-t-1 pt-5">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           <div className="flex flex-row justify-start md:justify-center  items-center gap-4">
             <div>

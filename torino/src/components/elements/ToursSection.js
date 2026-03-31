@@ -5,7 +5,6 @@ export default async function TourList() {
   const Alltours = await getAllTours();
 
   const tours = Alltours.slice(0, 8);
-
   if (!tours || tours.length === 0) {
     return (
       <div className="text-center text-gray-500 py-10 font-sans">

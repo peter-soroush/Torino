@@ -6,7 +6,7 @@ function Footer() {
   const phoneNumber = "021-8574";
   return (
     <footer>
-      <div className="max-w-full px-12 md:px-31 container flex flex-col border-t border-gray-300 pt-6 md:flex-row mx-auto font-sans justify-between mt-10 ">
+      <div className="max-w-full px-12 md:px-31 container flex flex-col border-t border-gray-300 pt-10 md:flex-row mx-auto font-sans justify-between  bg-gray-50">
         <div className="flex flex-row space-x-10 md:space-x-0 lg:space-x-10 space-y-5 md:space-y-0 justify-between ">
           <div className=" items-start flex flex-col gap-5">
             <h3 className="font-bold text-2xl">تورینو</h3>
@@ -28,15 +28,17 @@ function Footer() {
          md:mt-0 space-y-3 md:space-y-12 justify-between pb-5"
         >
           <div className="flex flex-col items-end space-y-7 md:space-y-10">
-            <Image
-              src="/images/Logo.png"
-              alt="logo"
-              width={146}
-              height={44}
-              className="w-30 md:w-[146px] h-auto cursor-pointer"
-              loading="eager"
-            />
-
+            <Link href="/">
+              {" "}
+              <Image
+                src="/images/Logo.png"
+                alt="logo"
+                width={146}
+                height={44}
+                className="w-30 md:w-[146px] h-auto cursor-pointer"
+                loading="eager"
+              />
+            </Link>
             <div className="flex items-center text-gray-700   text-xl">
               <span>تلفن پشتیبانی : </span>
               <span dir="ltr"> ۰۲۱-۸۵۷۴ </span>

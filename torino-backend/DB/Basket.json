@@ -1,1 +1,24 @@
-{}
+{
+  "id": "c3d4e5f6-7890-abcd-ef12-34567890abcd",
+  "origin": {
+    "id": "4",
+    "name": "Isfahan"
+  },
+  "destination": {
+    "id": "5",
+    "name": "Sulaymaniyah"
+  },
+  "startDate": "2025-11-01T00:00:00.000Z",
+  "endDate": "2025-11-10T00:00:00.000Z",
+  "title": "سلیمانیه",
+  "fleetVehicle": "train",
+  "price": 35000,
+  "availableSeats": 40,
+  "capacity": 50,
+  "insurance": true,
+  "options": [
+    "نهار و صبحانه",
+    "هفل پنج ستاره"
+  ],
+  "image": "http://localhost:6500/static/images/sulaymaniyahTour.png"
+}

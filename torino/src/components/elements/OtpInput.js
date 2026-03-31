@@ -1,26 +1,30 @@
 import { useState, useRef } from "react";
 
-export default function OtpInput() {
-  const [otp, setOtp] = useState(["", "", "", "", ""]);
-
+export default function OtpInput({ onChange }) {
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const inputRefs = useRef([]);
 
   const handleChange = (index, e) => {
     const value = e.target.value;
-
     if (isNaN(value)) return;
 
     const newOtp = [...otp];
-
     newOtp[index] = value.substring(value.length - 1);
+
     setOtp(newOtp);
 
-    if (value && index < 4 && inputRefs.current[index + 1]) {
+    // 🔥 ترفند طلایی: ارسال فوریِ دیتا به کامپوننت پدر بدون معطلی
+    if (onChange) {
+      onChange(newOtp.join(""));
+    }
+
+    if (value && index < 5 && inputRefs.current[index + 1]) {
       inputRefs.current[index + 1].focus();
     }
   };
 
   const handleKeyDown = (index, e) => {
+    // اگر بک‌اسپیس زد و خانه خالی بود، برگرد به خانه قبلی
     if (
       e.key === "Backspace" &&
       !otp[index] &&
@@ -29,11 +33,21 @@ export default function OtpInput() {
     ) {
       inputRefs.current[index - 1].focus();
     }
+
+    // اگر بک‌اسپیس زد و خانه پر بود، فقط خودش را پاک کن و به پدر خبر بده
+    if (e.key === "Backspace" && otp[index]) {
+      const newOtp = [...otp];
+      newOtp[index] = "";
+      setOtp(newOtp);
+      if (onChange) {
+        onChange(newOtp.join(""));
+      }
+    }
   };
 
   const handlePaste = (e) => {
     e.preventDefault();
-    const pastedData = e.clipboardData.getData("text").slice(0, 5).split("");
+    const pastedData = e.clipboardData.getData("text").slice(0, 6).split("");
 
     if (pastedData.some((char) => isNaN(char))) return;
 
@@ -41,9 +55,15 @@ export default function OtpInput() {
     pastedData.forEach((char, i) => {
       newOtp[i] = char;
     });
+
     setOtp(newOtp);
 
-    const focusIndex = pastedData.length < 5 ? pastedData.length : 4;
+    // 🔥 ارسال فوری به پدر موقع Paste کردن
+    if (onChange) {
+      onChange(newOtp.join(""));
+    }
+
+    const focusIndex = pastedData.length < 6 ? pastedData.length : 5;
     inputRefs.current[focusIndex].focus();
   };
 
@@ -63,6 +83,7 @@ export default function OtpInput() {
           className="w-12 h-14 text-center text-xl font-bold border border-gray-300 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all"
         />
       ))}
+      {console.log(otp)}
     </div>
   );
 }
