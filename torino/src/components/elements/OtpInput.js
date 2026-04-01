@@ -83,7 +83,6 @@ export default function OtpInput({ onChange }) {
           className="w-12 h-14 text-center text-xl font-bold border border-gray-300 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all"
         />
       ))}
-      {console.log(otp)}
     </div>
   );
 }

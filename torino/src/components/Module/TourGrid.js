@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function TourGrid({ tours }) {
   const [showAll, setShowAll] = useState(false);
-  console.log({ tours });
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 cursor-pointer">

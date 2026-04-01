@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { addToBasket } from "@/actions/basket"; // ایمپورت اکشنِ جدید
+import { addToBasket } from "@/actions/basket";
 import { useRouter } from "next/navigation";
 
 export default function ReserveButton({ tourId }) {
@@ -11,23 +11,14 @@ export default function ReserveButton({ tourId }) {
     setIsLoading(true);
 
     try {
-      // صدا زدن سرور اکشن
       const response = await addToBasket(tourId);
 
       if (response.success) {
-        // رزرو موفقیت‌آمیز بود!
         alert(response.message);
-        // اختیاری: کاربر را بفرستیم به صفحه سبد خرید
-        // router.push("/cart");
+        // 🔥 انتقال کاربر بعد از موفقیت‌آمیز بودن درخواست PUT
+        router.push(`/basket/${tourId}`);
       } else {
-        // اگر ارور 401 بود یعنی کاربر لاگین نیست
-        if (response.status === 401) {
-          alert(response.message);
-          // 💡 اینجا می‌توانید کد باز کردن مودال لاگین را قرار دهید
-        } else {
-          // ارورهای دیگر بک‌اند (مثلاً ظرفیت پر شده)
-          alert(response.message);
-        }
+        alert(response.message);
       }
     } catch (error) {
       alert("یک خطای غیرمنتظره رخ داد.");

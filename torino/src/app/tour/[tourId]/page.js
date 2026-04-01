@@ -31,8 +31,6 @@ async function TourPage({ params }) {
   }
   const tourData = await res.json();
 
-  console.log(tourData);
-
   return (
     <section className="container max-w-full mx-auto md:bg-gray-200 font-sans py-15">
       <div className="flex flex-col mx-auto items-center md:items-start rounded-lg bg-white md:mx-31 px-5 md:my-10 md:pt-5">

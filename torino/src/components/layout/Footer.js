@@ -35,7 +35,7 @@ function Footer() {
                 alt="logo"
                 width={146}
                 height={44}
-                className="w-30 md:w-[146px] h-auto cursor-pointer"
+                className="w-30 md:w-36.5 h-auto cursor-pointer"
                 loading="eager"
               />
             </Link>
@@ -44,47 +44,57 @@ function Footer() {
               <span dir="ltr"> ۰۲۱-۸۵۷۴ </span>
             </div>
           </div>
-          <div className="flex flex-wrap justify-start items-center gap-4 md:gap-2 lg:gap-8 max-w-[200px] md:max-w-full lg:max-w-full lg:flex-row-reverse md:flex-row-reverse">
+          <div className="flex flex-wrap justify-start items-center gap-4 md:gap-2 lg:gap-8 max-w-50 md:max-w-full lg:max-w-full lg:flex-row-reverse md:flex-row-reverse">
             <Image
               src="/images/OthersLogo1.png"
               alt="logo"
               width={68}
               height={74}
-              className="w-12 lg:w-[68px] md:w-[40] h-auto cursor-pointer"
+              className="w-12 lg:w-17 md:w-10 h-auto cursor-pointer"
               loading="eager"
             />
-            <Image
-              src="/images/OthersLogo2.png"
-              alt="logo"
-              width={68}
-              height={74}
-              className="w-12 lg:w-[68px] md:w-[40] h-auto cursor-pointer"
-              loading="eager"
-            />
+            <div className="relative w-12 md:w-10 lg:w-[68px] aspect-[68/74] cursor-pointer">
+              <Image
+                src="/images/OthersLogo2.png"
+                alt="logo"
+                fill // 🔥 این پراپ جادویی جایگزین width و height می‌شود
+                className="object-contain" // عکس را بدون دفرمه شدن در باکس جا می‌دهد
+                sizes="(max-width: 768px) 48px, (max-width: 1024px) 40px, 68px"
+                loading="eager"
+              />
+            </div>
             <Image
               src="/images/OthersLogo3.png"
               alt="logo"
               width={68}
               height={74}
-              className="w-12 lg:w-[68px] md:w-[40] h-auto cursor-pointer"
+              className="w-12 lg:w-17 md:w-10 h-auto cursor-pointer"
               loading="eager"
+              style={{ height: "auto" }}
             />
-            <Image
-              src="/images/OthersLogo4.png"
-              alt="logo"
-              width={68}
-              height={74}
-              className="w-12 lg:w-[68px] md:w-[40] h-auto cursor-pointer  "
-              loading="eager"
-            />
-            <Image
-              src="/images/OthersLogo5.png"
-              alt="logo"
-              width={68}
-              height={74}
-              className="w-12 lg:w-[68px] md:w-[40] h-auto cursor-pointer"
-              loading="eager"
-            />
+            {/* لوگوی شماره ۴ */}
+            <div className="relative w-12 md:w-10 lg:w-[68px] aspect-[68/74] cursor-pointer">
+              <Image
+                src="/images/OthersLogo4.png"
+                alt="logo"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 48px, (max-width: 1024px) 40px, 68px"
+                loading="eager"
+              />
+            </div>
+
+            {/* لوگوی شماره ۵ */}
+            <div className="relative w-12 md:w-10 lg:w-[68px] aspect-[68/74] cursor-pointer">
+              <Image
+                src="/images/OthersLogo5.png"
+                alt="logo"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 48px, (max-width: 1024px) 40px, 68px"
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
       </div>

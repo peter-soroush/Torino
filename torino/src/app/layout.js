@@ -37,7 +37,6 @@ export default async function RootLayout({ children }) {
   const accessToken = cookieStore.get("accessToken")?.value;
   const isLoggedIn = !!accessToken;
 
-  // ۲. استخراج دیتای کاربر (برای نمایش در هدر)
   const userDataCookie = cookieStore.get("userData")?.value;
   let userMobile = "پروفایل کاربری";
 
@@ -55,6 +54,7 @@ export default async function RootLayout({ children }) {
       lang="fa"
       dir="rtl"
       className={`${customFont.variable} h-full antialiased `}
+      suppressHydrationWarning
     >
       <body
         className="flex flex-col min-h-screen bg-gray-50 font-sans"

@@ -111,7 +111,7 @@ function Header({ isLoggedIn, userMobile }) {
               >
                 <RiUser3Fill className="text-xl lg:flex md:hidden" />
                 <span className="md:text-sm lg:text-lg">
-                  {toPersianNumbers("09127134110")}
+                  {toPersianNumbers(`${userMobile}`)}
                 </span>
                 <IoIosArrowDown />
               </button>
