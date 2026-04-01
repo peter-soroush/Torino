@@ -1,23 +1,39 @@
 [
   {
     "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    "origin": { "id": "1", "name": "Tehran" },
-    "destination": { "id": "2", "name": "Sananndaj" },
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "2",
+      "name": "Sananndaj"
+    },
     "startDate": "2025-10-01T00:00:00.000Z",
     "endDate": "2025-10-05T00:00:00.000Z",
     "title": "تور کردستان",
     "fleetVehicle": "bus",
     "price": 105000,
-    "availableSeats": 25,
+    "availableSeats": 23,
     "capacity": 30,
     "insurance": true,
-    "options": ["راهنمای تور", "ساحل اختصاصی", "صبحانه، نهار و شام"],
+    "options": [
+      "راهنمای تور",
+      "ساحل اختصاصی",
+      "صبحانه، نهار و شام"
+    ],
     "image": "/static/images/kurdestanTour.png"
   },
   {
     "id": "b2c3d4e5-f678-90ab-cdef-234567890abc",
-    "origin": { "id": "2", "name": "Sananndaj" },
-    "destination": { "id": "3", "name": "Madrid" },
+    "origin": {
+      "id": "2",
+      "name": "Sananndaj"
+    },
+    "destination": {
+      "id": "3",
+      "name": "Madrid"
+    },
     "startDate": "2025-10-10T00:00:00.000Z",
     "endDate": "2025-10-25T00:00:00.000Z",
     "title": "تور مادرید",
@@ -26,43 +42,70 @@
     "availableSeats": 15,
     "capacity": 150,
     "insurance": false,
-    "options": ["راهنمای تور", "نهار و شام"],
+    "options": [
+      "راهنمای تور",
+      "نهار و شام"
+    ],
     "image": "/static/images/madridTour.png"
   },
   {
     "id": "c3d4e5f6-7890-abcd-ef12-34567890abcd",
-    "origin": { "id": "4", "name": "Isfahan" },
-    "destination": { "id": "5", "name": "Sulaymaniyah" },
+    "origin": {
+      "id": "4",
+      "name": "Isfahan"
+    },
+    "destination": {
+      "id": "5",
+      "name": "Sulaymaniyah"
+    },
     "startDate": "2025-11-01T00:00:00.000Z",
     "endDate": "2025-11-10T00:00:00.000Z",
     "title": "سلیمانیه",
     "fleetVehicle": "train",
     "price": 35000,
-    "availableSeats": 40,
+    "availableSeats": 38,
     "capacity": 50,
     "insurance": true,
-    "options": ["نهار و صبحانه", "هفل پنج ستاره"],
+    "options": [
+      "نهار و صبحانه",
+      "هفل پنج ستاره"
+    ],
     "image": "/static/images/sulaymaniyahTour.png"
   },
   {
     "id": "d4e5f678-90ab-cdef-1234-567890abcdef",
-    "origin": { "id": "1", "name": "Tehran" },
-    "destination": { "id": "6", "name": "Hewler" },
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "6",
+      "name": "Hewler"
+    },
     "startDate": "2025-11-15T00:00:00.000Z",
     "endDate": "2025-11-22T00:00:00.000Z",
     "title": "هولر",
     "fleetVehicle": "airplane",
     "price": 105000,
-    "availableSeats": 20,
+    "availableSeats": 19,
     "capacity": 30,
     "insurance": false,
-    "options": ["نهار و صبحانه", "هفل پنج ستاره"],
+    "options": [
+      "نهار و صبحانه",
+      "هفل پنج ستاره"
+    ],
     "image": "/static/images/arbilTour.png"
   },
   {
     "id": "e5f67890-abcd-ef12-3456-7890abcdef12",
-    "origin": { "id": "1", "name": "Tehran" },
-    "destination": { "id": "7", "name": "Mazandaran" },
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "7",
+      "name": "Mazandaran"
+    },
     "startDate": "2025-12-01T00:00:00.000Z",
     "endDate": "2025-12-15T00:00:00.000Z",
     "title": "تور مازندران",
@@ -71,13 +114,22 @@
     "availableSeats": 300,
     "capacity": 350,
     "insurance": true,
-    "options": ["نهار و صبحانه", "هفل پنج ستاره"],
+    "options": [
+      "نهار و صبحانه",
+      "هفل پنج ستاره"
+    ],
     "image": "/static/images/mazandaranTour.png"
   },
   {
     "id": "f67890ab-cdef-1234-5678-90abcdef1234",
-    "origin": { "id": "1", "name": "Tehran" },
-    "destination": { "id": "8", "name": "Gilan" },
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "8",
+      "name": "Gilan"
+    },
     "startDate": "2026-01-10T00:00:00.000Z",
     "endDate": "2026-01-16T00:00:00.000Z",
     "title": "تور آفرود",
@@ -86,13 +138,22 @@
     "availableSeats": 25,
     "capacity": 250,
     "insurance": true,
-    "options": ["نهار و صبحانه", "هفل پنج ستاره"],
+    "options": [
+      "نهار و صبحانه",
+      "هفل پنج ستاره"
+    ],
     "image": "/static/images/offroadTour.png"
   },
   {
     "id": "67890abc-def1-2345-6789-0abcdef12345",
-    "origin": { "id": "1", "name": "Tehran" },
-    "destination": { "id": "9", "name": "Italy" },
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "9",
+      "name": "Italy"
+    },
     "startDate": "2026-02-01T00:00:00.000Z",
     "endDate": "2026-02-20T00:00:00.000Z",
     "title": "تور ایتالیا",
@@ -101,13 +162,22 @@
     "availableSeats": 20,
     "capacity": 200,
     "insurance": true,
-    "options": ["نهار و صبحانه", "هفل پنج ستاره"],
+    "options": [
+      "نهار و صبحانه",
+      "هفل پنج ستاره"
+    ],
     "image": "/static/images/italyTour.png"
   },
   {
     "id": "7890abcd-ef12-3456-7890-123456abcdef",
-    "origin": { "id": "1", "name": "Tehran" },
-    "destination": { "id": "10", "name": "Kish" },
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "10",
+      "name": "Kish"
+    },
     "startDate": "2026-03-15T00:00:00.000Z",
     "endDate": "2026-03-19T00:00:00.000Z",
     "title": "تور کیش",
@@ -116,7 +186,11 @@
     "availableSeats": 12,
     "capacity": 50,
     "insurance": true,
-    "options": ["گشت جزیره", "هتل پنج ستاره", "ترانسفر فرودگاهی"],
+    "options": [
+      "گشت جزیره",
+      "هتل پنج ستاره",
+      "ترانسفر فرودگاهی"
+    ],
     "image": "/static/images/kishTour.png"
   }
 ]

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { cookies } from "next/headers";
+import ToastProvider from "@/components/utils/ToastProvider";
 
 const customFont = localFont({
   src: [
@@ -60,6 +61,7 @@ export default async function RootLayout({ children }) {
         className="flex flex-col min-h-screen bg-gray-50 font-sans"
         suppressHydrationWarning
       >
+        <ToastProvider />
         <Header isLoggedIn={isLoggedIn} userMobile={userMobile} />
         <main className="grow bg-gray-50">{children}</main>
         <Footer />
