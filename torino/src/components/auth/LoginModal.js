@@ -8,16 +8,16 @@ import {
 
 import { loginUser } from "@/actions/auth"; // اکشنی که در مرحله قبل ساختیم
 import OtpInput from "../elements/OtpInput";
+import { toast } from "react-toastify";
 
 export default function LoginModal({ isOpen, onClose }) {
   const [step, setStep] = useState("phone");
-  const [mobile, setMobile] = useState(""); // تغییر نام Number به mobile
-  const [otpCode, setOtpCode] = useState(""); // ذخیره کد تایپ شده
+  const [mobile, setMobile] = useState("");
+  const [otpCode, setOtpCode] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // ریست کردن مودال وقتی بسته می‌شود
   useEffect(() => {
     if (!isOpen) {
       const timer = setTimeout(() => {
@@ -30,7 +30,6 @@ export default function LoginModal({ isOpen, onClose }) {
     }
   }, [isOpen]);
 
-  // مرحله ۱: ارسال شماره موبایل به سرور
   const handleSendOtp = async () => {
     setError("");
 
@@ -62,7 +61,6 @@ export default function LoginModal({ isOpen, onClose }) {
     }
   };
 
-  // مرحله ۲: چک کردن کد و لاگین نهایی
   const handleVerifyOtp = async () => {
     setError("");
 
@@ -82,9 +80,9 @@ export default function LoginModal({ isOpen, onClose }) {
       const data = await res.json();
 
       if (res.ok) {
-        // ذخیره توکن‌ها در کوکی سرور
         await loginUser(data);
-        onClose(); // بستن موفقیت‌آمیز مودال
+        toast.success("با موفقیت وارد شدید");
+        onClose();
       } else {
         setError(data.message || "کد وارد شده فاقد اعتبار است!");
       }
@@ -117,7 +115,6 @@ export default function LoginModal({ isOpen, onClose }) {
             {step === "phone" ? "ورود به تورینو" : "کد تایید را وارد کنید"}
           </DialogTitle>
 
-          {/* نمایش ارورهای API */}
           {error && (
             <div className="bg-red-50 text-red-500 p-3 rounded-lg mb-4 text-sm text-center">
               {error}
@@ -161,7 +158,6 @@ export default function LoginModal({ isOpen, onClose }) {
                   ارسال شد.
                 </p>
 
-                {/* دریافت کد وارد شده از کامپوننت فرزند */}
                 <OtpInput onChange={(code) => setOtpCode(code)} />
 
                 <div className="flex flex-col gap-2 mt-4">

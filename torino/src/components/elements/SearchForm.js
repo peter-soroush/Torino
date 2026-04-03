@@ -83,7 +83,6 @@ export default function SearchForm() {
   };
 
   const handleSearch = () => {
-    // 🔥 لایه محافظتی: اگر هر ۳ فیلد کاملاً خالی بودند، متوقف شو!
     if (!selectedOrigin?.id && !selectedDestination?.id && !selectedDate) {
       toast.warning(
         "لطفاً حداقل یک مورد (مبدا، مقصد یا تاریخ) را برای جستجو انتخاب کنید.",
@@ -170,7 +169,6 @@ export default function SearchForm() {
           apiData={apiData}
           selectedOrigin={selectedOrigin}
           selectedDestination={selectedDestination}
-          // 🔥 این خط بسیار مهم است! باید استیت را آپدیت کند نه اینکه فقط لاگ بگیرد
           onDateSelect={(date) => setSelectedDate(date)}
         />
 

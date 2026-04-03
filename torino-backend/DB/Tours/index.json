@@ -38,7 +38,7 @@
     "title": "تور لوکس کیش",
     "fleetVehicle": "Airplane",
     "price": 12500000,
-    "availableSeats": 15,
+    "availableSeats": 14,
     "insurance": true,
     "options": [
       "هتل ۵ ستاره داریوش",
@@ -85,7 +85,7 @@
     "title": "تور دره ستارگان قشم",
     "fleetVehicle": "Train",
     "price": 7200000,
-    "availableSeats": 19,
+    "availableSeats": 18,
     "insurance": false,
     "options": [
       "گشت جزیره هنگام",
@@ -390,7 +390,7 @@
     "title": "تور ترکیبی ایتالیا (رم، فلورانس، ونیز)",
     "fleetVehicle": "Airplane",
     "price": 185000000,
-    "availableSeats": 20,
+    "availableSeats": 19,
     "insurance": true,
     "options": [
       "ویزای شینگن",
@@ -1158,7 +1158,7 @@
     "title": "بلک فرایدی استانبول",
     "fleetVehicle": "Airplane",
     "price": 28000000,
-    "availableSeats": 40,
+    "availableSeats": 39,
     "insurance": true,
     "options": [
       "هتل نزدیک مراکز خرید",

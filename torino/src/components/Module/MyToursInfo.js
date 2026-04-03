@@ -99,7 +99,7 @@ async function MyToursInfo() {
                 {getLongPersianDate(tourItem.startDate)}
               </div>
             </div>
-            <div className="flex flex-row lg:w-1/3 justify-between ">
+            <div className="flex flex-row lg:w-1/3 justify-between lg:justify-start lg:gap-10">
               <div className="text-sm gap-1 items-center font-semibold">
                 تاریخ برگشت
               </div>

@@ -13,7 +13,6 @@ export default function OtpInput({ onChange }) {
 
     setOtp(newOtp);
 
-    // 🔥 ترفند طلایی: ارسال فوریِ دیتا به کامپوننت پدر بدون معطلی
     if (onChange) {
       onChange(newOtp.join(""));
     }
@@ -24,7 +23,6 @@ export default function OtpInput({ onChange }) {
   };
 
   const handleKeyDown = (index, e) => {
-    // اگر بک‌اسپیس زد و خانه خالی بود، برگرد به خانه قبلی
     if (
       e.key === "Backspace" &&
       !otp[index] &&
@@ -34,7 +32,6 @@ export default function OtpInput({ onChange }) {
       inputRefs.current[index - 1].focus();
     }
 
-    // اگر بک‌اسپیس زد و خانه پر بود، فقط خودش را پاک کن و به پدر خبر بده
     if (e.key === "Backspace" && otp[index]) {
       const newOtp = [...otp];
       newOtp[index] = "";
@@ -58,7 +55,6 @@ export default function OtpInput({ onChange }) {
 
     setOtp(newOtp);
 
-    // 🔥 ارسال فوری به پدر موقع Paste کردن
     if (onChange) {
       onChange(newOtp.join(""));
     }

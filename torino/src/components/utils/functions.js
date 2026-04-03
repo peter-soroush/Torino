@@ -78,7 +78,7 @@ const getTourStatus = (startDate, endDate) => {
   const diffTime = start - today;
   const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-  // ۲. برگرداندن div با استایل‌های مختلف (Badge)
+  // ۲. برگرداندن div با استایل‌های مختلف (Badge
   if (today > end) {
     return (
       <div className="bg-green-100 text-green-600 px-1 py-1 rounded-3xl text-xs text-center font-medium w-fit ">
@@ -94,7 +94,7 @@ const getTourStatus = (startDate, endDate) => {
   } else if (daysLeft > 0) {
     return (
       <div className="bg-amber-300 text-orange-600 px-3 py-1 rounded-3xl text-xs text-center font-medium w-fit">
-        {daysLeft.toLocaleString("fa-IR")} روز مانده به تور
+        {daysLeft.toLocaleString("fa-IR")} روز مانده
       </div>
     );
   }

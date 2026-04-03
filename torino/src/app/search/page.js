@@ -1,4 +1,5 @@
 import ReserveButton from "@/components/Module/ReserveButton";
+import SearchPagination from "@/components/Module/SearchPagination";
 import { cityNameMapper } from "@/components/utils/cityMapper";
 import {
   convertToPersianDate,
@@ -7,7 +8,8 @@ import {
 } from "@/components/utils/functions";
 import { getAllTours } from "@/components/utils/tourService";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaBusSimple, FaCheck, FaRoute } from "react-icons/fa6";
@@ -16,6 +18,8 @@ import { IoCalendarSharp, IoCarSportOutline } from "react-icons/io5";
 import { LiaShuttleVanSolid } from "react-icons/lia";
 import { MdAirplanemodeActive, MdOutlineReduceCapacity } from "react-icons/md";
 import { TbCarSuv, TbShip } from "react-icons/tb";
+
+const ITEMS_PER_PAGE = 6;
 
 async function SearchPage({ searchParams }) {
   const params = await searchParams;
@@ -43,10 +47,38 @@ async function SearchPage({ searchParams }) {
     );
   }
 
-  console.log(filteredTours);
+  const currentPage = Number(params?.page) || 1;
+
+  const totalItems = filteredTours.length;
+  const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+
+  const paginatedTours = filteredTours.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE,
+  );
+
+  if (paginatedTours.length === 0) {
+    return (
+      <section className="container max-w-full mx-auto md:bg-gray-200 font-sans py-15 justify-center items-center text-center">
+        <span className="text-2xl ">
+          {" "}
+          برای مبدا، مقصد یا تاریخ مورد نظر، توری یافت نشد{" "}
+        </span>
+        <Link href="/">
+          {" "}
+          <div className="py-10 ">
+            <span className="bg-brandcolor px-5 py-3 rounded-lg hover:bg-green-500">
+              بازگشت به صفحه اصلی
+            </span>
+          </div>{" "}
+        </Link>
+      </section>
+    );
+  }
+
   return (
     <section className="container max-w-full mx-auto md:bg-gray-200 font-sans py-15">
-      {filteredTours.map((tourData) => (
+      {paginatedTours.map((tourData) => (
         <div
           key={tourData.id}
           className="flex flex-col mx-auto items-center md:items-start rounded-lg bg-white md:mx-31 px-5 md:my-10 md:pt-5"
@@ -186,6 +218,7 @@ async function SearchPage({ searchParams }) {
           </div>
         </div>
       ))}
+      <SearchPagination totalPages={totalPages} currentPage={currentPage} />
     </section>
   );
 }
