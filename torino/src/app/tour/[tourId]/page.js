@@ -15,9 +15,15 @@ import { MdAirplanemodeActive } from "react-icons/md";
 import { TbShip } from "react-icons/tb";
 import { FaCheck } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
+import { TbCarSuv } from "react-icons/tb";
+import { IoCarSportOutline } from "react-icons/io5";
+import { MdOutlineReduceCapacity } from "react-icons/md";
+
+import { LiaShuttleVanSolid } from "react-icons/lia";
 
 import { cityNameMapper } from "@/components/utils/cityMapper";
 import ReserveButton from "@/components/Module/ReserveButton";
+import { AiFillSafetyCertificate } from "react-icons/ai";
 
 async function TourPage({ params }) {
   const { tourId } = await params;
@@ -30,6 +36,7 @@ async function TourPage({ params }) {
     notFound();
   }
   const tourData = await res.json();
+  console.log(tourData);
 
   return (
     <section className="container max-w-full mx-auto md:bg-gray-200 font-sans py-15">
@@ -80,7 +87,6 @@ async function TourPage({ params }) {
         </div>
 
         <div className="flex flex-row items-center text-center mt-8 w-full py-4 overflow-x-auto [&::-webkit-scrollbar]:hidden divide-x  divide-gray-300">
-          {/* ۱. مبدا */}
           <div className="flex flex-col gap-2 items-center justify-center min-w-[33.33%] md:min-w-0 md:flex-1 px-2">
             <div className="flex flex-row gap-2 items-center text-gray-500 text-sm md:text-base">
               <FaRoute />
@@ -113,14 +119,18 @@ async function TourPage({ params }) {
 
           <div className="flex flex-col gap-2 items-center justify-center min-w-[33.33%] md:min-w-0 md:flex-1 px-2">
             <div className="flex flex-row gap-2 items-center text-gray-500 text-sm md:text-base">
-              {getVehicleName(tourData.fleetVehicle) === "پرواز" ? (
+              {getVehicleName(tourData.fleetVehicle) === "هواپیما" ? (
                 <MdAirplanemodeActive />
               ) : getVehicleName(tourData.fleetVehicle) === "اتوبوس" ? (
                 <FaBusSimple />
               ) : getVehicleName(tourData.fleetVehicle) === "کشتی" ? (
                 <TbShip />
+              ) : getVehicleName(tourData.fleetVehicle) === "آفرود" ? (
+                <TbCarSuv />
+              ) : getVehicleName(tourData.fleetVehicle) === "ون" ? (
+                <LiaShuttleVanSolid />
               ) : (
-                <FaRoute />
+                <IoCarSportOutline />
               )}{" "}
               <span>حمل و نقل</span>
             </div>
@@ -131,17 +141,22 @@ async function TourPage({ params }) {
 
           <div className="flex flex-col gap-2 items-center justify-center min-w-[33.33%] md:min-w-0 md:flex-1 px-2">
             <div className="flex flex-row gap-2 items-center text-gray-500 text-sm md:text-base">
-              <FaRoute />
+              <MdOutlineReduceCapacity />
               <span>ظرفیت</span>
             </div>
             <div className="font-bold text-gray-800 text-sm md:text-base">
-              حداکثر {tourData.capacity.toLocaleString("fa-IR")} نفر
+              {tourData.availableSeats
+                ? "حداکثر" +
+                  " " +
+                  tourData.availableSeats.toLocaleString("fa-IR") +
+                  " نفر"
+                : "نامشخص"}{" "}
             </div>
           </div>
 
           <div className="flex flex-col gap-2 items-center justify-center min-w-[33.33%] md:min-w-0 md:flex-1 px-2">
             <div className="flex flex-row gap-2 items-center text-gray-500 text-sm md:text-base">
-              <FaRoute />
+              <AiFillSafetyCertificate />
               <span>بیمه</span>
             </div>
             <div className="font-bold text-sm md:text-base">

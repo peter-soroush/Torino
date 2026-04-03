@@ -1,3 +1,4 @@
+import Link from "next/link";
 import TourGrid from "../Module/TourGrid";
 import { getAllTours } from "../utils/tourService";
 
@@ -15,7 +16,9 @@ export default async function TourList() {
 
   return (
     <section className="max-w-full container mx-auto px-10 md:px-31 mt-16 font-sans">
-      <h3 className="text-2xl font-bold text-gray-800 mb-6">همه تورها</h3>
+      <Link href="/tour">
+        <h3 className="text-2xl font-bold text-gray-800 mb-6">همه تورها</h3>
+      </Link>
 
       <TourGrid tours={tours} />
     </section>

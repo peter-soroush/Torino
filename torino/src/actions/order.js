@@ -18,6 +18,11 @@ export async function submitOrder(passengerData) {
       body: JSON.stringify(passengerData),
     });
 
+    if (res.status === 401 || res.status === 403) {
+      // پرتاب به روت خروج تا کوکی پاک شود و به صفحه اصلی برود
+      redirect("/api/auth/signout");
+    }
+
     const data = await res.json().catch(() => ({}));
 
     if (!res.ok) {

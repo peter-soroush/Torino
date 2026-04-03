@@ -1,196 +1,1169 @@
 [
   {
-    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "id": "1a2b3c",
     "origin": {
       "id": "1",
       "name": "Tehran"
     },
     "destination": {
       "id": "2",
-      "name": "Sananndaj"
+      "name": "Sanandaj"
     },
-    "startDate": "2025-10-01T00:00:00.000Z",
-    "endDate": "2025-10-05T00:00:00.000Z",
-    "title": "تور کردستان",
-    "fleetVehicle": "bus",
-    "price": 105000,
+    "startDate": "2025-10-05T00:00:00.000Z",
+    "endDate": "2025-10-10T00:00:00.000Z",
+    "title": "تور پاییزی کردستان",
+    "fleetVehicle": "Bus",
+    "price": 6500000,
     "availableSeats": 23,
-    "capacity": 30,
     "insurance": true,
     "options": [
-      "راهنمای تور",
-      "ساحل اختصاصی",
-      "صبحانه، نهار و شام"
+      "راهنمای محلی",
+      "اقامتگاه بوم‌گردی",
+      "صبحانه"
     ],
     "image": "/static/images/kurdestanTour.png"
   },
   {
-    "id": "b2c3d4e5-f678-90ab-cdef-234567890abc",
+    "id": "2b3c4d",
     "origin": {
-      "id": "2",
-      "name": "Sananndaj"
+      "id": "1",
+      "name": "Tehran"
     },
     "destination": {
-      "id": "3",
-      "name": "Madrid"
+      "id": "13",
+      "name": "Kish"
     },
-    "startDate": "2025-10-10T00:00:00.000Z",
-    "endDate": "2025-10-25T00:00:00.000Z",
-    "title": "تور مادرید",
-    "fleetVehicle": "ship",
-    "price": 240000,
+    "startDate": "2025-11-20T00:00:00.000Z",
+    "endDate": "2025-11-24T00:00:00.000Z",
+    "title": "تور لوکس کیش",
+    "fleetVehicle": "Airplane",
+    "price": 12500000,
     "availableSeats": 15,
-    "capacity": 150,
-    "insurance": false,
+    "insurance": true,
     "options": [
-      "راهنمای تور",
-      "نهار و شام"
+      "هتل ۵ ستاره داریوش",
+      "ترانسفر فرودگاهی",
+      "صبحانه بوفه"
     ],
-    "image": "/static/images/madridTour.png"
+    "image": "/static/images/kishTour.png"
   },
   {
-    "id": "c3d4e5f6-7890-abcd-ef12-34567890abcd",
+    "id": "3c4d5e",
     "origin": {
       "id": "4",
       "name": "Isfahan"
     },
     "destination": {
-      "id": "5",
-      "name": "Sulaymaniyah"
+      "id": "10",
+      "name": "Shiraz"
     },
-    "startDate": "2025-11-01T00:00:00.000Z",
-    "endDate": "2025-11-10T00:00:00.000Z",
-    "title": "سلیمانیه",
-    "fleetVehicle": "train",
-    "price": 35000,
-    "availableSeats": 38,
-    "capacity": 50,
+    "startDate": "2025-05-10T00:00:00.000Z",
+    "endDate": "2025-05-14T00:00:00.000Z",
+    "title": "تور بهار نارنج شیراز",
+    "fleetVehicle": "Bus",
+    "price": 4800000,
+    "availableSeats": 29,
     "insurance": true,
     "options": [
-      "نهار و صبحانه",
-      "هفل پنج ستاره"
+      "گشت پاسارگاد",
+      "بلیت اماکن تاریخی"
     ],
-    "image": "/static/images/sulaymaniyahTour.png"
+    "image": "/static/images/shirazTour.png"
   },
   {
-    "id": "d4e5f678-90ab-cdef-1234-567890abcdef",
+    "id": "4d5e6f",
     "origin": {
       "id": "1",
       "name": "Tehran"
     },
     "destination": {
-      "id": "6",
-      "name": "Hewler"
-    },
-    "startDate": "2025-11-15T00:00:00.000Z",
-    "endDate": "2025-11-22T00:00:00.000Z",
-    "title": "هولر",
-    "fleetVehicle": "airplane",
-    "price": 105000,
-    "availableSeats": 19,
-    "capacity": 30,
-    "insurance": false,
-    "options": [
-      "نهار و صبحانه",
-      "هفل پنج ستاره"
-    ],
-    "image": "/static/images/arbilTour.png"
-  },
-  {
-    "id": "e5f67890-abcd-ef12-3456-7890abcdef12",
-    "origin": {
-      "id": "1",
-      "name": "Tehran"
-    },
-    "destination": {
-      "id": "7",
-      "name": "Mazandaran"
+      "id": "14",
+      "name": "Qeshm"
     },
     "startDate": "2025-12-01T00:00:00.000Z",
-    "endDate": "2025-12-15T00:00:00.000Z",
-    "title": "تور مازندران",
-    "fleetVehicle": "SUV",
-    "price": 185000,
-    "availableSeats": 300,
-    "capacity": 350,
-    "insurance": true,
+    "endDate": "2025-12-06T00:00:00.000Z",
+    "title": "تور دره ستارگان قشم",
+    "fleetVehicle": "Train",
+    "price": 7200000,
+    "availableSeats": 19,
+    "insurance": false,
     "options": [
-      "نهار و صبحانه",
-      "هفل پنج ستاره"
+      "گشت جزیره هنگام",
+      "قطار ۴ تخته فدک"
     ],
-    "image": "/static/images/mazandaranTour.png"
+    "image": "/static/images/qeshmTour.png"
   },
   {
-    "id": "f67890ab-cdef-1234-5678-90abcdef1234",
+    "id": "5e6f7g",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Gilan",
+      "name": "Gilan"
+    },
+    "startDate": "2025-06-15T00:00:00.000Z",
+    "endDate": "2025-06-18T00:00:00.000Z",
+    "title": "ییلاقات ماسال و اولسبلنگاه",
+    "fleetVehicle": "SUV",
+    "price": 5500000,
+    "availableSeats": 12,
+    "insurance": true,
+    "options": [
+      "کلبه چوبی",
+      "شب‌نشینی دور آتش",
+      "آفرود سبک"
+    ],
+    "image": "/static/images/gilanTour.png"
+  },
+  {
+    "id": "6f7g8h",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "23",
+      "name": "Chabahar"
+    },
+    "startDate": "2026-02-10T00:00:00.000Z",
+    "endDate": "2026-02-15T00:00:00.000Z",
+    "title": "شگفتی‌های مریخی چابهار",
+    "fleetVehicle": "Airplane",
+    "price": 16800000,
+    "availableSeats": 25,
+    "insurance": true,
+    "options": [
+      "هتل لیپار",
+      "گشت کوه‌های مریخی"
+    ],
+    "image": "/static/images/chabaharTour.png"
+  },
+  {
+    "id": "7g8h9i",
+    "origin": {
+      "id": "11",
+      "name": "Mashhad"
+    },
+    "destination": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "startDate": "2025-07-20T00:00:00.000Z",
+    "endDate": "2025-07-23T00:00:00.000Z",
+    "title": "تور موزه‌گردی تهران",
+    "fleetVehicle": "Airplane",
+    "price": 8500000,
+    "availableSeats": 40,
+    "insurance": true,
+    "options": [
+      "هتل اسپیناس",
+      "لیدر تهران‌شناس"
+    ],
+    "image": "/static/images/tehranTour.png"
+  },
+  {
+    "id": "8h9i0j",
     "origin": {
       "id": "1",
       "name": "Tehran"
     },
     "destination": {
       "id": "8",
-      "name": "Gilan"
+      "name": "Offroad"
     },
-    "startDate": "2026-01-10T00:00:00.000Z",
-    "endDate": "2026-01-16T00:00:00.000Z",
-    "title": "تور آفرود",
+    "startDate": "2025-11-05T00:00:00.000Z",
+    "endDate": "2025-11-07T00:00:00.000Z",
+    "title": "کمپینگ کویر ریگ جن",
     "fleetVehicle": "SUV",
-    "price": 35000,
-    "availableSeats": 25,
-    "capacity": 250,
+    "price": 6000000,
+    "availableSeats": 10,
     "insurance": true,
     "options": [
-      "نهار و صبحانه",
-      "هفل پنج ستاره"
+      "فولبرد کمپینگ",
+      "تجهیزات آفرود"
     ],
     "image": "/static/images/offroadTour.png"
   },
   {
-    "id": "67890abc-def1-2345-6789-0abcdef12345",
+    "id": "9i0j1k",
     "origin": {
       "id": "1",
       "name": "Tehran"
     },
     "destination": {
-      "id": "9",
-      "name": "Italy"
+      "id": "15",
+      "name": "Istanbul"
     },
-    "startDate": "2026-02-01T00:00:00.000Z",
-    "endDate": "2026-02-20T00:00:00.000Z",
-    "title": "تور ایتالیا",
-    "fleetVehicle": "airplane",
-    "price": 18000,
-    "availableSeats": 20,
-    "capacity": 200,
+    "startDate": "2025-08-15T00:00:00.000Z",
+    "endDate": "2025-08-22T00:00:00.000Z",
+    "title": "تور استانبول ویژه تابستان",
+    "fleetVehicle": "Airplane",
+    "price": 35000000,
+    "availableSeats": 30,
     "insurance": true,
     "options": [
-      "نهار و صبحانه",
-      "هفل پنج ستاره"
+      "هتل ۴ ستاره تکسیم",
+      "گشت تنگه بسفر",
+      "بیمه مسافرتی"
+    ],
+    "image": "/static/images/istanbulTour.png"
+  },
+  {
+    "id": "0j1k2l",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "16",
+      "name": "Dubai"
+    },
+    "startDate": "2026-03-20T00:00:00.000Z",
+    "endDate": "2026-03-26T00:00:00.000Z",
+    "title": "تور دبی ویژه نوروز ۱۴۰۵",
+    "fleetVehicle": "Airplane",
+    "price": 42000000,
+    "availableSeats": 20,
+    "insurance": true,
+    "options": [
+      "اخذ ویزا",
+      "سافاری صحرا",
+      "هتل شیخ زاید"
+    ],
+    "image": "/static/images/dubaiTour.png"
+  },
+  {
+    "id": "1k2l3m",
+    "origin": {
+      "id": "12",
+      "name": "Tabriz"
+    },
+    "destination": {
+      "id": "18",
+      "name": "Tbilisi"
+    },
+    "startDate": "2025-09-10T00:00:00.000Z",
+    "endDate": "2025-09-15T00:00:00.000Z",
+    "title": "تور زمینی تفلیس",
+    "fleetVehicle": "Bus",
+    "price": 14500000,
+    "availableSeats": 44,
+    "insurance": true,
+    "options": [
+      "اتوبوس VIP",
+      "هتل ۳ ستاره با صبحانه"
+    ],
+    "image": "/static/images/tbilisiTour.png"
+  },
+  {
+    "id": "2l3m4n",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "19",
+      "name": "Yerevan"
+    },
+    "startDate": "2025-10-01T00:00:00.000Z",
+    "endDate": "2025-10-05T00:00:00.000Z",
+    "title": "تور هوایی ارمنستان",
+    "fleetVehicle": "Airplane",
+    "price": 24000000,
+    "availableSeats": 18,
+    "insurance": true,
+    "options": [
+      "پرواز ماهان",
+      "گشت دریاچه سوان",
+      "سیم‌کارت"
+    ],
+    "image": "/static/images/yerevanTour.png"
+  },
+  {
+    "id": "3m4n5o",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "25",
+      "name": "Muscat"
+    },
+    "startDate": "2025-11-25T00:00:00.000Z",
+    "endDate": "2025-11-30T00:00:00.000Z",
+    "title": "تور پاییزی مسقط",
+    "fleetVehicle": "Airplane",
+    "price": 38000000,
+    "availableSeats": 15,
+    "insurance": true,
+    "options": [
+      "ویزای توریستی",
+      "هتل ساحلی"
+    ],
+    "image": "/static/images/muscatTour.png"
+  },
+  {
+    "id": "4n5o6p",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "26",
+      "name": "Antalya"
+    },
+    "startDate": "2025-07-05T00:00:00.000Z",
+    "endDate": "2025-07-12T00:00:00.000Z",
+    "title": "سواحل آنتالیا (UALL)",
+    "fleetVehicle": "Airplane",
+    "price": 55000000,
+    "availableSeats": 40,
+    "insurance": true,
+    "options": [
+      "پرواز مستقیم سان اکسپرس",
+      "خدمات UALL",
+      "پارک آبی"
+    ],
+    "image": "/static/images/antalyaTour.png"
+  },
+  {
+    "id": "5o6p7q",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Doha",
+      "name": "Doha"
+    },
+    "startDate": "2026-01-10T00:00:00.000Z",
+    "endDate": "2026-01-15T00:00:00.000Z",
+    "title": "تور لوکس دوحه قطر",
+    "fleetVehicle": "Airplane",
+    "price": 48000000,
+    "availableSeats": 12,
+    "insurance": true,
+    "options": [
+      "پرواز قطر ایرویز",
+      "هتل ۵ ستاره سوق واقف"
+    ],
+    "image": "/static/images/dohaTour.png"
+  },
+  {
+    "id": "6p7q8r",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "17",
+      "name": "Paris"
+    },
+    "startDate": "2025-09-05T00:00:00.000Z",
+    "endDate": "2025-09-12T00:00:00.000Z",
+    "title": "تور رمانتیک پاریس",
+    "fleetVehicle": "Airplane",
+    "price": 145000000,
+    "availableSeats": 15,
+    "insurance": true,
+    "options": [
+      "اخذ ویزای شینگن",
+      "گشت ایفل و لوور",
+      "هتل مرکز شهر"
+    ],
+    "image": "/static/images/parisTour.png"
+  },
+  {
+    "id": "7q8r9s",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Italy",
+      "name": "Italy"
+    },
+    "startDate": "2026-04-10T00:00:00.000Z",
+    "endDate": "2026-04-20T00:00:00.000Z",
+    "title": "تور ترکیبی ایتالیا (رم، فلورانس، ونیز)",
+    "fleetVehicle": "Airplane",
+    "price": 185000000,
+    "availableSeats": 20,
+    "insurance": true,
+    "options": [
+      "ویزای شینگن",
+      "قطار سریع‌السیر بین شهری",
+      "لیدر فارسی‌زبان"
     ],
     "image": "/static/images/italyTour.png"
   },
   {
-    "id": "7890abcd-ef12-3456-7890-123456abcdef",
+    "id": "8r9s0t",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Madrid",
+      "name": "Madrid"
+    },
+    "startDate": "2025-10-15T00:00:00.000Z",
+    "endDate": "2025-10-23T00:00:00.000Z",
+    "title": "تور اسپانیا (مادرید و بارسلون)",
+    "fleetVehicle": "Airplane",
+    "price": 170000000,
+    "availableSeats": 18,
+    "insurance": true,
+    "options": [
+      "بلیت ورزشگاه سانتیاگو برنابئو",
+      "پرواز ترکیش"
+    ],
+    "image": "/static/images/madridTour.png"
+  },
+  {
+    "id": "9s0t1u",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Zurich",
+      "name": "Zurich"
+    },
+    "startDate": "2025-12-25T00:00:00.000Z",
+    "endDate": "2026-01-02T00:00:00.000Z",
+    "title": "سوئیس ویژه کریسمس",
+    "fleetVehicle": "Airplane",
+    "price": 260000000,
+    "availableSeats": 10,
+    "insurance": true,
+    "options": [
+      "گشت کوه‌های آلپ",
+      "شام ویژه کریسمس"
+    ],
+    "image": "/static/images/zurichTour.png"
+  },
+  {
+    "id": "0t1u2v",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Moscow",
+      "name": "Moscow"
+    },
+    "startDate": "2025-06-10T00:00:00.000Z",
+    "endDate": "2025-06-18T00:00:00.000Z",
+    "title": "شب‌های روشن روسیه (مسکو و سنت پترزبورگ)",
+    "fleetVehicle": "Airplane",
+    "price": 85000000,
+    "availableSeats": 25,
+    "insurance": true,
+    "options": [
+      "ویزای روسیه",
+      "قطار ساپسان",
+      "گشت میدان سرخ"
+    ],
+    "image": "/static/images/moscowTour.png"
+  },
+  {
+    "id": "1u2v3w",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Athens",
+      "name": "Athens"
+    },
+    "startDate": "2025-08-20T00:00:00.000Z",
+    "endDate": "2025-08-27T00:00:00.000Z",
+    "title": "تاریخ و سواحل یونان",
+    "fleetVehicle": "Airplane",
+    "price": 135000000,
+    "availableSeats": 16,
+    "insurance": true,
+    "options": [
+      "ویزای شینگن",
+      "بازدید از آکروپولیس"
+    ],
+    "image": "/static/images/athensTour.png"
+  },
+  {
+    "id": "2v3w4x",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Amsterdam",
+      "name": "Amsterdam"
+    },
+    "startDate": "2026-05-01T00:00:00.000Z",
+    "endDate": "2026-05-08T00:00:00.000Z",
+    "title": "هلند در فصل لاله‌ها",
+    "fleetVehicle": "Airplane",
+    "price": 160000000,
+    "availableSeats": 14,
+    "insurance": true,
+    "options": [
+      "باغ کوکنهوف",
+      "قایق‌سواری در کانال‌های آمستردام"
+    ],
+    "image": "/static/images/amsterdamTour.png"
+  },
+  {
+    "id": "3w4x5y",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Tokyo",
+      "name": "Tokyo"
+    },
+    "startDate": "2026-03-25T00:00:00.000Z",
+    "endDate": "2026-04-05T00:00:00.000Z",
+    "title": "فستیوال شکوفه‌های گیلاس ژاپن",
+    "fleetVehicle": "Airplane",
+    "price": 320000000,
+    "availableSeats": 11,
+    "insurance": true,
+    "options": [
+      "پرواز امارات",
+      "قطار شینکانسن",
+      "ویزای ژاپن"
+    ],
+    "image": "/static/images/tokyoTour.png"
+  },
+  {
+    "id": "4x5y6z",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Seoul",
+      "name": "Seoul"
+    },
+    "startDate": "2025-10-10T00:00:00.000Z",
+    "endDate": "2025-10-18T00:00:00.000Z",
+    "title": "پاییز رنگارنگ کره جنوبی",
+    "fleetVehicle": "Airplane",
+    "price": 280000000,
+    "availableSeats": 15,
+    "insurance": true,
+    "options": [
+      "ویزای کره",
+      "گشت جزیره نامی",
+      "لیدر محلی"
+    ],
+    "image": "/static/images/seoulTour.png"
+  },
+  {
+    "id": "5y6z7a",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "KualaLumpur",
+      "name": "KualaLumpur"
+    },
+    "startDate": "2025-11-20T00:00:00.000Z",
+    "endDate": "2025-11-28T00:00:00.000Z",
+    "title": "تور استوایی مالزی",
+    "fleetVehicle": "Airplane",
+    "price": 68000000,
+    "availableSeats": 22,
+    "insurance": true,
+    "options": [
+      "بدون نیاز به ویزا",
+      "برج‌های دوقلوی پتروناس"
+    ],
+    "image": "/static/images/kualaLumpurTour.png"
+  },
+  {
+    "id": "6z7a8b",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Phuket",
+      "name": "Phuket"
+    },
+    "startDate": "2026-01-15T00:00:00.000Z",
+    "endDate": "2026-01-23T00:00:00.000Z",
+    "title": "سواحل رویایی پوکت تایلند",
+    "fleetVehicle": "Airplane",
+    "price": 85000000,
+    "availableSeats": 25,
+    "insurance": true,
+    "options": [
+      "گشت جزیره جیمز باند",
+      "ویزای تایلند",
+      "هتل ساحلی"
+    ],
+    "image": "/static/images/phuketTour.png"
+  },
+  {
+    "id": "7a8b9c",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Maldives",
+      "name": "Maldives"
+    },
+    "startDate": "2026-02-14T00:00:00.000Z",
+    "endDate": "2026-02-20T00:00:00.000Z",
+    "title": "مالدیو ویژه ولنتاین",
+    "fleetVehicle": "Airplane",
+    "price": 190000000,
+    "availableSeats": 10,
+    "insurance": true,
+    "options": [
+      "ویلای روی آب",
+      "ترانسفر با قایق تندرو",
+      "فولبرد"
+    ],
+    "image": "/static/images/maldivesTour.png"
+  },
+  {
+    "id": "8b9c0d",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Bali",
+      "name": "Bali"
+    },
+    "startDate": "2025-08-05T00:00:00.000Z",
+    "endDate": "2025-08-14T00:00:00.000Z",
+    "title": "جزیره خدایان بالی",
+    "fleetVehicle": "Airplane",
+    "price": 140000000,
+    "availableSeats": 18,
+    "insurance": true,
+    "options": [
+      "ویزای اندونزی",
+      "جنگل میمون‌ها",
+      "معبد اولوواتو"
+    ],
+    "image": "/static/images/baliTour.png"
+  },
+  {
+    "id": "9c0d1e",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Singapore",
+      "name": "Singapore"
+    },
+    "startDate": "2025-12-10T00:00:00.000Z",
+    "endDate": "2025-12-16T00:00:00.000Z",
+    "title": "سنگاپور شهر آینده",
+    "fleetVehicle": "Airplane",
+    "price": 115000000,
+    "availableSeats": 14,
+    "insurance": true,
+    "options": [
+      "ویزای سنگاپور",
+      "بازدید از گاردنز بای د بی"
+    ],
+    "image": "/static/images/singaporeTour.png"
+  },
+  {
+    "id": "0d1e2f",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Goa",
+      "name": "Goa"
+    },
+    "startDate": "2025-11-12T00:00:00.000Z",
+    "endDate": "2025-11-20T00:00:00.000Z",
+    "title": "سواحل گوا هند",
+    "fleetVehicle": "Airplane",
+    "price": 65000000,
+    "availableSeats": 20,
+    "insurance": true,
+    "options": [
+      "ویزای الکترونیک هند",
+      "پارتی‌های ساحلی"
+    ],
+    "image": "/static/images/goaTour.png"
+  },
+  {
+    "id": "1e2f3g",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Beijing",
+      "name": "Beijing"
+    },
+    "startDate": "2025-09-20T00:00:00.000Z",
+    "endDate": "2025-09-28T00:00:00.000Z",
+    "title": "تور پهناور چین (پکن و شانگهای)",
+    "fleetVehicle": "Airplane",
+    "price": 130000000,
+    "availableSeats": 16,
+    "insurance": true,
+    "options": [
+      "دیوار چین",
+      "ویزای گروهی چین"
+    ],
+    "image": "/static/images/beijingTour.png"
+  },
+  {
+    "id": "2f3g4h",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Rio",
+      "name": "Rio"
+    },
+    "startDate": "2026-02-12T00:00:00.000Z",
+    "endDate": "2026-02-22T00:00:00.000Z",
+    "title": "کارناوال ریو دو ژانیرو برزیل",
+    "fleetVehicle": "Airplane",
+    "price": 450000000,
+    "availableSeats": 8,
+    "insurance": true,
+    "options": [
+      "بلیت جایگاه کارناوال",
+      "مجسمه مسیح",
+      "ویزای برزیل"
+    ],
+    "image": "/static/images/rioTour.png"
+  },
+  {
+    "id": "3g4h5i",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "CapeTown",
+      "name": "CapeTown"
+    },
+    "startDate": "2025-11-01T00:00:00.000Z",
+    "endDate": "2025-11-10T00:00:00.000Z",
+    "title": "طبیعت وحشی آفریقای جنوبی",
+    "fleetVehicle": "Airplane",
+    "price": 280000000,
+    "availableSeats": 12,
+    "insurance": true,
+    "options": [
+      "سافاری پارک جنگلی",
+      "دماغه امید نیک",
+      "ویزای آفریقای جنوبی"
+    ],
+    "image": "/static/images/capetownTour.png"
+  },
+  {
+    "id": "4h5i6j",
+    "origin": {
+      "id": "4",
+      "name": "Isfahan"
+    },
+    "destination": {
+      "id": "15",
+      "name": "Istanbul"
+    },
+    "startDate": "2025-07-10T00:00:00.000Z",
+    "endDate": "2025-07-16T00:00:00.000Z",
+    "title": "استانبول مستقیم از اصفهان",
+    "fleetVehicle": "Airplane",
+    "price": 38000000,
+    "availableSeats": 20,
+    "insurance": true,
+    "options": [
+      "پرواز ترکیش از اصفهان",
+      "هتل شیشلی"
+    ],
+    "image": "/static/images/istanbulTour.png"
+  },
+  {
+    "id": "5i6j7k",
+    "origin": {
+      "id": "12",
+      "name": "Tabriz"
+    },
+    "destination": {
+      "id": "16",
+      "name": "Dubai"
+    },
+    "startDate": "2025-12-05T00:00:00.000Z",
+    "endDate": "2025-12-10T00:00:00.000Z",
+    "title": "دبی از تبریز",
+    "fleetVehicle": "Airplane",
+    "price": 44000000,
+    "availableSeats": 18,
+    "insurance": true,
+    "options": [
+      "پرواز مستقیم",
+      "هتل دیره"
+    ],
+    "image": "/static/images/dubaiTour.png"
+  },
+  {
+    "id": "6j7k8l",
+    "origin": {
+      "id": "10",
+      "name": "Shiraz"
+    },
+    "destination": {
+      "id": "25",
+      "name": "Muscat"
+    },
+    "startDate": "2025-10-20T00:00:00.000Z",
+    "endDate": "2025-10-25T00:00:00.000Z",
+    "title": "عمان از شیراز",
+    "fleetVehicle": "Airplane",
+    "price": 36000000,
+    "availableSeats": 22,
+    "insurance": true,
+    "options": [
+      "پرواز سلام ایر",
+      "ویزای فرودگاهی"
+    ],
+    "image": "/static/images/muscatTour.png"
+  },
+  {
+    "id": "7k8l9m",
     "origin": {
       "id": "1",
       "name": "Tehran"
     },
     "destination": {
       "id": "10",
+      "name": "Shiraz"
+    },
+    "startDate": "2025-05-15T00:00:00.000Z",
+    "endDate": "2025-05-18T00:00:00.000Z",
+    "title": "کوتاه و اقتصادی شیراز",
+    "fleetVehicle": "Train",
+    "price": 3800000,
+    "availableSeats": 45,
+    "insurance": false,
+    "options": [
+      "هتل ۳ ستاره",
+      "قطار کوپه‌ای"
+    ],
+    "image": "/static/images/shirazTour.png"
+  },
+  {
+    "id": "8l9m0n",
+    "origin": {
+      "id": "11",
+      "name": "Mashhad"
+    },
+    "destination": {
+      "id": "13",
       "name": "Kish"
     },
-    "startDate": "2026-03-15T00:00:00.000Z",
-    "endDate": "2026-03-19T00:00:00.000Z",
-    "title": "تور کیش",
-    "fleetVehicle": "airplane",
-    "price": 85000,
-    "availableSeats": 12,
-    "capacity": 50,
+    "startDate": "2025-11-10T00:00:00.000Z",
+    "endDate": "2025-11-14T00:00:00.000Z",
+    "title": "کیش از مشهد",
+    "fleetVehicle": "Airplane",
+    "price": 14500000,
+    "availableSeats": 25,
     "insurance": true,
     "options": [
-      "گشت جزیره",
-      "هتل پنج ستاره",
-      "ترانسفر فرودگاهی"
+      "پرواز سپهران",
+      "هتل ترنج"
     ],
     "image": "/static/images/kishTour.png"
+  },
+  {
+    "id": "9m0n1o",
+    "origin": {
+      "id": "4",
+      "name": "Isfahan"
+    },
+    "destination": {
+      "id": "14",
+      "name": "Qeshm"
+    },
+    "startDate": "2025-12-20T00:00:00.000Z",
+    "endDate": "2025-12-25T00:00:00.000Z",
+    "title": "قشم از اصفهان",
+    "fleetVehicle": "Train",
+    "price": 6800000,
+    "availableSeats": 30,
+    "insurance": true,
+    "options": [
+      "ترانسفر با شناور تندرو",
+      "گشت جنگل حرا"
+    ],
+    "image": "/static/images/qeshmTour.png"
+  },
+  {
+    "id": "0n1o2p",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "11",
+      "name": "Mashhad"
+    },
+    "startDate": "2025-06-05T00:00:00.000Z",
+    "endDate": "2025-06-08T00:00:00.000Z",
+    "title": "زیارتی مشهد (هتل قصر طلایی)",
+    "fleetVehicle": "Airplane",
+    "price": 9500000,
+    "availableSeats": 50,
+    "insurance": true,
+    "options": [
+      "فولبرد",
+      "ترانسفر حرم"
+    ],
+    "image": "/static/images/mashhadTour.png"
+  },
+  {
+    "id": "1o2p3q",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "4",
+      "name": "Isfahan"
+    },
+    "startDate": "2025-04-20T00:00:00.000Z",
+    "endDate": "2025-04-23T00:00:00.000Z",
+    "title": "نصف جهان اصفهان",
+    "fleetVehicle": "Bus",
+    "price": 3500000,
+    "availableSeats": 40,
+    "insurance": true,
+    "options": [
+      "گشت میدان نقش جهان",
+      "اتوبوس VIP"
+    ],
+    "image": "/static/images/isfahanTour.png"
+  },
+  {
+    "id": "2p3q4r",
+    "origin": {
+      "id": "10",
+      "name": "Shiraz"
+    },
+    "destination": {
+      "id": "11",
+      "name": "Mashhad"
+    },
+    "startDate": "2025-08-10T00:00:00.000Z",
+    "endDate": "2025-08-14T00:00:00.000Z",
+    "title": "مشهد از شیراز",
+    "fleetVehicle": "Airplane",
+    "price": 8200000,
+    "availableSeats": 35,
+    "insurance": true,
+    "options": [
+      "پرواز کاسپین",
+      "هتل نزدیک حرم"
+    ],
+    "image": "/static/images/mashhadTour.png"
+  },
+  {
+    "id": "3q4r5s",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Yazd",
+      "name": "Yazd"
+    },
+    "startDate": "2025-10-25T00:00:00.000Z",
+    "endDate": "2025-10-28T00:00:00.000Z",
+    "title": "کویر و معماری یزد",
+    "fleetVehicle": "Train",
+    "price": 4200000,
+    "availableSeats": 20,
+    "insurance": true,
+    "options": [
+      "اقامت در هتل داد",
+      "تور بافت تاریخی"
+    ],
+    "image": "/static/images/yazdTour.png"
+  },
+  {
+    "id": "4r5s6t",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Kerman",
+      "name": "Kerman"
+    },
+    "startDate": "2025-11-15T00:00:00.000Z",
+    "endDate": "2025-11-20T00:00:00.000Z",
+    "title": "کرمان و کلوت‌های شهداد",
+    "fleetVehicle": "Train",
+    "price": 5800000,
+    "availableSeats": 18,
+    "insurance": true,
+    "options": [
+      "کمپینگ یک شبه در کویر لوت",
+      "باغ شازده ماهان"
+    ],
+    "image": "/static/images/kermanTour.png"
+  },
+  {
+    "id": "5s6t7u",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Tabriz",
+      "name": "Tabriz"
+    },
+    "startDate": "2025-08-01T00:00:00.000Z",
+    "endDate": "2025-08-05T00:00:00.000Z",
+    "title": "خنکای تبریز و کندوان",
+    "fleetVehicle": "Airplane",
+    "price": 7500000,
+    "availableSeats": 25,
+    "insurance": true,
+    "options": [
+      "هتل صخره‌ای کندوان",
+      "بازار تبریز"
+    ],
+    "image": "/static/images/tabrizTour.png"
+  },
+  {
+    "id": "6t7u8v",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Sulaymaniyah",
+      "name": "Sulaymaniyah"
+    },
+    "startDate": "2025-09-20T00:00:00.000Z",
+    "endDate": "2025-09-24T00:00:00.000Z",
+    "title": "سلیمانیه عراق (زمینی)",
+    "fleetVehicle": "Bus",
+    "price": 12500000,
+    "availableSeats": 30,
+    "insurance": true,
+    "options": [
+      "تردد از مرز باشماق",
+      "هتل ۴ ستاره"
+    ],
+    "image": "/static/images/sulaymaniyahTour.png"
+  },
+  {
+    "id": "7u8v9w",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Hewler",
+      "name": "Hewler"
+    },
+    "startDate": "2025-10-10T00:00:00.000Z",
+    "endDate": "2025-10-15T00:00:00.000Z",
+    "title": "اربیل (هولر) هوایی",
+    "fleetVehicle": "Airplane",
+    "price": 28000000,
+    "availableSeats": 15,
+    "insurance": true,
+    "options": [
+      "پرواز مستقیم",
+      "هتل روتانا"
+    ],
+    "image": "/static/images/arbilTour.png"
+  },
+  {
+    "id": "8v9w0x",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Paris",
+      "name": "Paris"
+    },
+    "startDate": "2026-05-15T00:00:00.000Z",
+    "endDate": "2026-05-25T00:00:00.000Z",
+    "title": "ترکیبی فرانسه و سوئیس",
+    "fleetVehicle": "Airplane",
+    "price": 290000000,
+    "availableSeats": 12,
+    "insurance": true,
+    "options": [
+      "ویزای مولتی شینگن",
+      "پرواز لوفت‌هانزا"
+    ],
+    "image": "/static/images/parisTour.png"
+  },
+  {
+    "id": "9w0x1y",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "Phuket",
+      "name": "Phuket"
+    },
+    "startDate": "2026-02-20T00:00:00.000Z",
+    "endDate": "2026-03-01T00:00:00.000Z",
+    "title": "پوکت و بانکوک",
+    "fleetVehicle": "Airplane",
+    "price": 115000000,
+    "availableSeats": 20,
+    "insurance": true,
+    "options": [
+      "پرواز ماهان به بانکوک + پرواز داخلی",
+      "گشت‌های شهری رایگان"
+    ],
+    "image": "/static/images/phuketTour.png"
+  },
+  {
+    "id": "0x1y2z",
+    "origin": {
+      "id": "1",
+      "name": "Tehran"
+    },
+    "destination": {
+      "id": "15",
+      "name": "Istanbul"
+    },
+    "startDate": "2025-11-25T00:00:00.000Z",
+    "endDate": "2025-11-29T00:00:00.000Z",
+    "title": "بلک فرایدی استانبول",
+    "fleetVehicle": "Airplane",
+    "price": 28000000,
+    "availableSeats": 40,
+    "insurance": true,
+    "options": [
+      "هتل نزدیک مراکز خرید",
+      "بار مجاز ۳۰ کیلوگرم"
+    ],
+    "image": "/static/images/istanbulTour.png"
   }
 ]

@@ -9,6 +9,7 @@ import { RiHome5Line } from "react-icons/ri";
 import { BsAirplane } from "react-icons/bs";
 import { RxSpeakerQuiet } from "react-icons/rx";
 import { LuPhone } from "react-icons/lu";
+import Link from "next/link";
 
 function HamburgerMenuFile({ isOpen, onClose }) {
   useEffect(() => {
@@ -28,12 +29,14 @@ function HamburgerMenuFile({ isOpen, onClose }) {
         <div className="fixed inset-0 w-1/2 flex items-start justify-center p-4 h-screen mr-0 px-0 py-0 ">
           <DialogPanel className="h-full w-full max-w-md bg-white rounded-tl-2xl rounded-bl-2xl p-6 shadow-xl relative transition-all">
             <div className="flex flex-col gap-8 mt-10 ">
-              <div className="flex flex-row gap-4 items-center text-brandcolor hover:text-brandcolor cursor-pointer">
-                <div className="">
-                  <RiHome5Line className="" size={20} />
+              <Link href="/">
+                <div className="flex flex-row gap-4 items-center text-brandcolor hover:text-brandcolor cursor-pointer">
+                  <div className="">
+                    <RiHome5Line className="" size={20} />
+                  </div>
+                  <div>صفحه اصلی</div>
                 </div>
-                <div>صفحه اصلی</div>
-              </div>
+              </Link>
               <div className="flex flex-row gap-4 items-center hover:text-brandcolor cursor-pointer">
                 <div>
                   <BsAirplane

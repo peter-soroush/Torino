@@ -126,8 +126,16 @@ export default function CheckoutClient({ basketData }) {
         <div className="flex flex-row justify-between border-dashed border-b-2 border-gray-300 pb-0 lg:pb-4">
           <div className="text-2xl font-semibold">{basketData?.title}</div>
           <div className="text-gray-500 text-sm">
-            {/* اگر بک‌اند تاریخ رفت و برگشت را فرستاده بود، اینجا محاسبه کنید */}
-            محاسبه زمان
+            {" "}
+            {getDurationDays(
+              basketData.startDate,
+              basketData.endDate,
+            ).toLocaleString("fa-IR")}
+            {"  "} روز و{"  "}
+            {(
+              getDurationDays(basketData.startDate, basketData.endDate) - 1
+            ).toLocaleString("fa-IR")}{" "}
+            شب
           </div>
         </div>
 

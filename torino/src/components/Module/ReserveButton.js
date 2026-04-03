@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { addToBasket } from "@/actions/basket";
 import { useRouter } from "next/navigation";
-
+import { toast } from "react-toastify";
 export default function ReserveButton({ tourId }) {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -14,14 +14,15 @@ export default function ReserveButton({ tourId }) {
       const response = await addToBasket(tourId);
 
       if (response.success) {
-        alert(response.message);
-        // 🔥 انتقال کاربر بعد از موفقیت‌آمیز بودن درخواست PUT
-        router.push(`/basket/${tourId}`);
+        toast.success(response.message);
+        setTimeout(() => {
+          router.push(`/basket/${tourId}`);
+        }, 1000);
       } else {
-        alert(response.message);
+        toast.error(response.message);
       }
     } catch (error) {
-      alert("یک خطای غیرمنتظره رخ داد.");
+      toast.error("یک خطای غیرمنتظره رخ داد.");
     } finally {
       setIsLoading(false);
     }

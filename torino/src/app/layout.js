@@ -1,9 +1,10 @@
 import localFont from "next/font/local";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation"; // 👈 این ایمپورت اضافه شد
 
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { cookies } from "next/headers";
 import ToastProvider from "@/components/utils/ToastProvider";
 
 const customFont = localFont({
@@ -36,17 +37,38 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const cookieStore = await cookies();
   const accessToken = cookieStore.get("accessToken")?.value;
-  const isLoggedIn = !!accessToken;
-
   const userDataCookie = cookieStore.get("userData")?.value;
+
+  let isLoggedIn = false;
   let userMobile = "پروفایل کاربری";
 
-  if (userDataCookie) {
+  // بررسی اعتبار و انقضای توکن
+  if (accessToken) {
     try {
-      const userObj = JSON.parse(userDataCookie);
-      userMobile = userObj.firstName || userObj.mobile || "پروفایل";
+      // استخراج بخش Payload توکن
+      const payloadBase64 = accessToken.split(".")[1];
+      const decodedJson = Buffer.from(payloadBase64, "base64").toString();
+      const payload = JSON.parse(decodedJson);
+
+      const currentTime = Math.floor(Date.now() / 1000);
+
+      // اگر توکن منقضی شده بود، هدایت به مسیر پاک کردن کوکی‌ها
+      if (payload.exp && payload.exp < currentTime) {
+        redirect("/api/auth/signout");
+      } else {
+        // توکن معتبر است
+        isLoggedIn = true;
+
+        // پارس کردن دیتای کاربر فقط در صورتی که توکن معتبر باشد
+        if (userDataCookie) {
+          const userObj = JSON.parse(userDataCookie);
+          userMobile = userObj.firstName || userObj.mobile || "پروفایل";
+        }
+      }
     } catch (error) {
-      console.error("خطا در پارس کردن دیتای کاربر");
+      console.error("خطا در پردازش توکن:", error);
+      // اگر توکن ساختار نامعتبری داشت، باز هم خارج شود
+      redirect("/api/auth/signout");
     }
   }
 

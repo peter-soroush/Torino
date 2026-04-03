@@ -26,6 +26,11 @@ export async function addToBasket(tourId) {
       },
     });
 
+    if (res.status === 401 || res.status === 403) {
+      // پرتاب به روت خروج تا کوکی پاک شود و به صفحه اصلی برود
+      redirect("/api/auth/signout");
+    }
+
     const data = await res.json().catch(() => ({})); // اگر بک‌اند دیتای خالی فرستاد، کرش نکند
 
     if (!res.ok) {

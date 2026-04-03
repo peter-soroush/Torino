@@ -9,8 +9,8 @@ import {
 } from "../utils/functions";
 import Link from "next/link";
 
-export default function TourGrid({ tours }) {
-  const [showAll, setShowAll] = useState(false);
+export default function TourGrid({ tours, showAllstat }) {
+  const [showAll, setShowAll] = useState(showAllstat);
 
   return (
     <>

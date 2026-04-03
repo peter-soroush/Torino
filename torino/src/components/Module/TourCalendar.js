@@ -59,7 +59,18 @@ export default function TourCalendar({
         locale={persian_fa}
         onChange={(dateObject) => {
           if (dateObject) {
-            onDateSelect(dateObject.toDate());
+            // ۱. تبدیل به تاریخ استاندارد میلادی
+            const date = dateObject.toDate();
+
+            // ۲. ساخت یک رشته تمیز (YYYY-MM-DD) تا با دیتابیسِ شما همخوانی کامل داشته باشد
+            // استفاده از padStart برای اینکه ماه‌های یک‌رقمی صفر بگیرند (مثلا 5 بشود 05)
+            const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+
+            // ۳. ارسال رشته‌ی تمیز به کامپوننت پدر
+            onDateSelect(formattedDate);
+          } else {
+            // ۴. اگر کاربر تاریخ را ضربدر زد و پاک کرد، استیتِ فرم هم باید خالی شود
+            onDateSelect("");
           }
         }}
         mapDays={mapDays}

@@ -3,13 +3,15 @@ import React, { useEffect, useRef, useState } from "react";
 import { FiMapPin, FiGlobe, FiCalendar } from "react-icons/fi";
 import OriginLocation from "./OriginLocation";
 import DestinationLocation from "./DestinationLocation";
-
-import { getAllTours } from "../utils/tourService"; // 👈 ایمپورت سرویس API
+import { useRouter } from "next/navigation";
+import { getAllTours } from "../utils/tourService";
 import TourCalendar from "../Module/TourCalendar";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 export default function SearchForm() {
-  // ۱. ساخت استیت مرکزی برای نگهداری کل تورها
+  const router = useRouter();
+  const [selectedDate, setSelectedDate] = useState("");
   const [apiData, setApiData] = useState([]);
 
   const [isOriginOpen, setIsOriginOpen] = useState(false);
@@ -23,7 +25,6 @@ export default function SearchForm() {
   const originRef = useRef(null);
   const destinationRef = useRef(null);
 
-  // ۲. فراخوانی API فقط یک بار در کل فرم
   useEffect(() => {
     const fetchTours = async () => {
       try {
@@ -36,7 +37,6 @@ export default function SearchForm() {
     fetchTours();
   }, []);
 
-  // ... (کدهای handleClickOutside و هندلرهای کلیک مثل قبل دست‌نخورده باقی می‌ماند) ...
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (originRef.current && !originRef.current.contains(event.target))
@@ -82,6 +82,30 @@ export default function SearchForm() {
     setIsDestinationOpen(true);
   };
 
+  const handleSearch = () => {
+    // 🔥 لایه محافظتی: اگر هر ۳ فیلد کاملاً خالی بودند، متوقف شو!
+    if (!selectedOrigin?.id && !selectedDestination?.id && !selectedDate) {
+      toast.warning(
+        "لطفاً حداقل یک مورد (مبدا، مقصد یا تاریخ) را برای جستجو انتخاب کنید.",
+      );
+      return;
+    }
+
+    const params = new URLSearchParams();
+
+    if (selectedOrigin?.id) {
+      params.append("originId", selectedOrigin.id);
+    }
+    if (selectedDestination?.id) {
+      params.append("destinationId", selectedDestination.id);
+    }
+    if (selectedDate) {
+      params.append("date", selectedDate);
+    }
+
+    router.push(`/search?${params.toString()}`);
+  };
+
   return (
     <div className="w-full max-w-4xl mx-auto px-10 md:px-20 mt-15 font-sans">
       <h2 className="text-center text-gray-700 font-bold text-xl md:text-3xl mb-6">
@@ -106,7 +130,7 @@ export default function SearchForm() {
             />
             {isOriginOpen && (
               <OriginLocation
-                apiData={apiData} // 👈 پاس دادن دیتای مرکزی به فرزند
+                apiData={apiData}
                 searchQuery={originInputValue}
                 onSelect={handleSelectOrigin}
                 selectedDestination={selectedDestination}
@@ -131,7 +155,7 @@ export default function SearchForm() {
             />
             {isDestinationOpen && (
               <DestinationLocation
-                apiData={apiData} // 👈 پاس دادن دیتای مرکزی به فرزند
+                apiData={apiData}
                 searchQuery={destinationInputValue}
                 onSelect={handleSelectDestination}
                 selectedOrigin={selectedOrigin}
@@ -146,16 +170,17 @@ export default function SearchForm() {
           apiData={apiData}
           selectedOrigin={selectedOrigin}
           selectedDestination={selectedDestination}
-          onDateSelect={(date) => console.log("تاریخ انتخاب شده:", date)}
+          // 🔥 این خط بسیار مهم است! باید استیت را آپدیت کند نه اینکه فقط لاگ بگیرد
+          onDateSelect={(date) => setSelectedDate(date)}
         />
-        <Link href="/search" className="w-full md:w-auto ">
-          <button
-            type="button"
-            className="w-full cursor-pointer md:w-auto bg-brandcolor text-white font-medium rounded-xl py-3 md:px-10 hover:bg-green-700 transition-colors"
-          >
-            جستجو
-          </button>
-        </Link>
+
+        <button
+          type="button"
+          onClick={handleSearch}
+          className="w-full cursor-pointer md:w-auto bg-brandcolor text-white font-medium rounded-xl py-3 md:px-10 hover:bg-green-700 transition-colors"
+        >
+          جستجو
+        </button>
       </form>
     </div>
   );

@@ -20,6 +20,11 @@ export default async function Basket() {
     cache: "no-store",
   });
 
+  if (res.status === 401 || res.status === 403) {
+    // پرتاب به روت خروج تا کوکی پاک شود و به صفحه اصلی برود
+    redirect("/api/auth/signout");
+  }
+
   if (!res.ok) {
     return (
       <div className="text-center mt-20 text-xl font-bold text-red-500">
